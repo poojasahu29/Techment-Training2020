@@ -1,0 +1,21 @@
+                  day-5 Database Assignment Questions
+
+1)write a query to fetch employee names whose name ends with 's'
+ and has five character
+2)count the employee in each deptartment
+3)dept wise show the minimum salary
+4)show only those dept name whose max salary is > 60000
+5)find the second highest salary from employee
+6)show the all employee names except tester
+
+all are basic only i have given
+
+solution:---
+1) select * from employee where name like '%s';
+2) select dept,count(id) from employee group by dept;
+3) select dept,count(id), min(salary) from employee group by dept;
+
+4) select dept  from employee where salary>60000;
+2) select max(salary) from employee where salary not in (select max(salary) from employee);
+6) select name from employee where dept='tester';
+
