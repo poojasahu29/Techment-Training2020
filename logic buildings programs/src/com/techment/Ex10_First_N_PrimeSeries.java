@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Ex10_First_N_series {
+public class Ex10_First_N_PrimeSeries {
 	public void isPrime(int number) {
 		
 		    int  i,p,count,flag;
@@ -31,10 +31,10 @@ public class Ex10_First_N_series {
 		// TODO Auto-generated method stub
 		int number;
 		Scanner myobj = new Scanner(System.in);
-	    System.out.println("Enter the Number that check number is Armstrong or Not:");
+	    System.out.println("Enter the Number to get the Prime numbers series:");
         number= myobj.nextInt();
         System.out.println("First "+number+" prime numbers are") ;
-		 Ex10_First_N_series object=new  Ex10_First_N_series();
+		 Ex10_First_N_PrimeSeries object=new  Ex10_First_N_PrimeSeries();
 		 object.isPrime(number);
 		
 
