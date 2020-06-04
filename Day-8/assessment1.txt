@@ -1,0 +1,47 @@
+ Assessment -1
+
+1) find the value of b
+int a=7
+ i)int b=a++ - ++a - a++ + ++a -a--
+ ii)int b=--a + a-- + ++a + a-- -++a 
+
+
+2) print the pattern
+ *****
+ *   *
+ *   *
+ *   *
+ *****
+
+3)write a Program to Add Two Matrix take the input from user
+
+4)Array Program
+  i) odd sum and even sum
+      
+     sample output
+      eg:[2,6,7,9,4]
+        even=12
+        odd=16
+  ii) pair of sum in a given array
+       sample output
+        eg:[2,5,1,6,3,4]
+         sum=8
+       pair(3,5)
+           (6,2)
+
+--------------------------------------------------------------
+
+
+
+		 int i,j,k;
+		for(i=1; i<=5; i++)
+		{
+		for(j=1; j<=5; j++)
+		{
+		System.out.print("*");
+		}
+		System.out.println(" ");
+		}
+		}
+		
+           
