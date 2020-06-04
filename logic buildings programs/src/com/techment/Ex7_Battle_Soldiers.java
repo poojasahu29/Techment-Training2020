@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Battle_Soldiers{
+public class Ex7_Battle_Soldiers{
 	public static void main(String[] args) {
 		
 		int firstSoldier_number, lastSoldier_number;
