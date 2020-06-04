@@ -10,7 +10,7 @@ public class Ex7_Battle_Soldiers{
 		System.out.print("Enter 1st soldier number:");
 		lastSoldierNumber =  scanner.nextInt();
 
-		System.out.println("Soldiers come forward: - ");
+		System.out.println("Soldiers come forward: ");
 
 		for (int i = firstSoldier_number; i<=lastSoldier_number ; i++)
 			System.out.println(i);
