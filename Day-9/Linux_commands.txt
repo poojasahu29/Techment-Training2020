@@ -1,0 +1,85 @@
+show file content:
+1. cat
+
+Cat(concatenate) command is very frequently used in Linux. 
+It reads data from the file and gives their content as output. 
+It helps us to create, view, concatenate files. 
+So let us see some frequently used cat commands.
+
+To write file: cat>filename
+	Write some text and pre ctrl+d to save
+
+To view file content: cat filename
+
+2. tail
+
+tail returns the last n (default is 10) lines of each file 
+that it is given.
+
+syntax: tail [-2] filename
+
+3. head
+
+tail returns the top n (default is 10) lines of each file 
+that it is given.
+
+syntax: head [-2] filename
+
+4. tac
+
+tac command in Linux is used to concatenate and print files in reverse.
+
+syntax: tac filename
+
+5. less
+
+less command allows you to view the contents of a file and navigate through file.
+less command is faster because it does not load the entire file at once and allows 
+navigation though file using page up/down keys.
+
+syntax: less filename
+
+6. more
+
+more command is used to view the text files in the command prompt, 
+displaying one screen at a time in case the file is large
+
+syntax: more filename
+
+------------------------------------------------------------------------------------------------
+
+filter file content:
+
+1. sort
+
+SORT command in Linux/Unix with examples. SORT command sorts the contents of a text file, line by line. 
+sort is a standard command line program that prints the lines of its input or 
+concatenation of all files listed in its argument list in sorted order.
+
+syntax: sort filename
+
+2. cat filename.txt | grep keyword
+
+Search the given keyword in file
+
+3. wc -lwc filename
+
+counts the words, lines and characters in the given file
+
+4. uniq -c filename
+
+The uniq command in Linux is a command line utility that reports or filters out the repeated lines in a file.
+
+5. cut
+
+cut command in Linux with examples - GeeksforGeekswww.geeksforgeeks.org › cut-command-linux-examples
+The cut command in UNIX is a command for cutting out the sections from each line of files and writing the result to standard output.
+
+syntax: cut -d <delimeter> -f <column> filename
+
+
+6. comm
+
+compare given sorted files.
+
+syntax: comm filename1 filename2

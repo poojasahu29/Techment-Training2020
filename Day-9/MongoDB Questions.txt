@@ -1,0 +1,66 @@
+1) Explain what is MongoDB?
+
+Solution:  MongoDB is a cross-platform document-oriented database program that is open source and free in nature.
+ It can also be classified as the NoSQL database program. It was developed by MongoDB Inc. 
+ JSON-like documents with schema are used by MongoDB. Field, range queries, and regular expressions are also supported by MongoDB.
+ The queries used by this contain user-defined JavaScript functions. It provides high availability with the replica sets.
+ Fields can be indexed with primary and secondary indices. Sharding is used by MongoDB for scaling horizontally which determines
+ how the data will be distributed. It can also be used as a file system with load balancing.
+ It can also be used for batch processing of data.
+
+2)what is_id field in mongodb ?
+
+Solution : In MongoDB, each document stored in a collection requires a unique _id field that acts as a primary key. 
+If an inserted document omits the _id field, the MongoDB driver automatically generates an ObjectId for the _id field.
+ ... The _id field may contain values of any BSON data type, other than an array.
+
+3) What are the differences between MongoDB and MySQL?
+
+Solution : The various differences between MongoDB and MySQL are listed below:
+
+    In terms of data representation– In MySQL, we represent data in the form of tables and rows. 
+                                     Whereas, in MongoDB data is represented as collections of JSON documents.
+    Querying– In SQL, we put together a string in the query language which is then parsed by the database system. 
+              Whereas, in MongoDB, object querying is used.
+    Relationships– In MySQL, the relational database is only the Join operation which allows us 
+                   to perform queries across multiple tables. Whereas MongoDB does not support join operation 
+                   but can support multi-dimensional data types such as arrays, etc. 
+                   in this, embedding is a process in which we place one document inside the other.
+    Transactions– MySQL supports atomic transactions which are the ability to contain multiple operations within a transaction.
+                  Whereas, MongoDB does not support transactions.
+    Schema definition– In MySQL, you need to define your tables and columns before storing anything. 
+                       Whereas, in MongoDB, you don’t need to define a schema.
+
+4) Can you achieve primary key - foreign key relationships in MongoDB?
+
+Solution : We can achieve primary key-foreign key relationship by embedding one document inside another.
+ For example: An address document can be embedded inside customer document.
+
+5) Why is mongoDB said be highly scalable in terms of MySQL?
+
+Solution :  In MySQL it is Difficult to scale millions of data as Data is stored in multiple tables (relationship).This is not the case
+with MongoDB hence it is highly scalable.
+  
+
+6)  Why is mongoDB said be highly flexible in terms of MySQL?
+
+Solution : In MySQL we have Fixed data structure therefore not easy to make modifications to data structure.
+ In MySQL You need to spend hours and hours on designing the database before development. These all are not the cases
+with MongoDB hence it is highly flexible.
+
+7) Why is mongoDB said have high performance in terms of MySQL?
+
+Solution : In MySQL Data is generally stored across multiple tables. Joins have huge performance impact as it requires lot of CPU and resources. 
+Need to install and configure complex caching mechanism to make it faster. These all are not the cases
+with MongoDB hence it has higher performance.
+
+8) What is a document in MongoDB?
+
+Solution : A document is a representation of a single entity of data in the MongoDB database. A collection consists of one or more related objects.
+ A major difference exists between MongoDB and SQL, in that documents are different from rows. Row data is flat, 
+with one column for each value in the row.
+
+9) What is collection in MongoDB?
+
+Solution :  A collection is the equivalent of an RDBMS table. A collection exists within a single database.
+ Collections do not enforce a schema. Documents within a collection can have different fields. 

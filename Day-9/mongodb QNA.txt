@@ -1,0 +1,114 @@
+1) What is by NoSQL databases? STates its types.
+   NoSQL, which stands for "not only SQL," is an alternative to traditional relational databases in which data is placed in tables and data schema is carefully 
+   designed before the database is built. NoSQL databases are especially useful for working with large sets of distributed data.
+   Types : ** Key-value stores ** - Riak, Voldemort, and Redis
+           ** Wide-column stores ** - Cassandra and HBase.
+           ** Document databases ** - MongoDB 
+           ** Graph databases ** - Neo4J and HyperGraphDB.
+
+2) What is the syntax to create a collection and to drop a collection in MongoDB?
+
+    Syntax to create collection in MongoDB is db.createCollection(name,options)
+    Syntax to drop collection in MongoDB is db.collection.drop()
+
+3) What are Indexes in MongoDB?
+   Indexes support the efficient execution of queries in MongoDB. 
+   Without indexes, MongoDB must perform a collection scan, i.e. scan every document in a collection, to select those documents that match the query statement.
+   If an appropriate index exists for a query, MongoDB can use the index to limit the number of documents it must inspect.
+
+4) What is Sharding in MongoDB? Explain.
+   Sharding is a method for storing data across multiple machines. 
+   MongoDB uses sharding to support deployments with very large data sets and high throughput operations.
+
+5) What is Replication in MongoDB.What are Primary and Secondary Replica sets?
+    Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability. 
+    With multiple copies of data on different database servers, replication protects a database from the loss of a single server. 
+    Replication also allows you to recover from hardware failure and service interruptions.
+    
+    Primary and master nodes are the nodes that can accept writes. MongoDB's replication is 'single-master:' only one node can accept write operations at a time.
+    Secondary and slave nodes are read-only nodes that replicate from the primary.
+
+6) What is the role of a profiler in MongoDB? Where does the writes all the data?
+    The database profiler collects fine grained data about MongoDB write operations, cursors, database commands on a running mongod instance. 
+    You can enable profiling on a per-database or per-instance basis.
+    The database profiler writes all the data it collects to the system.profile collection, which is a capped collection.
+
+7)  Does MongoDB support primary-key, foreign-key relationship, if not how can you achieve primary key - foreign key relationships in MongoDB? 
+     No. By Default, MongoDB doesn't support primary key-foreign key relationship.
+     We can achieve primary key-foreign key relationship by embedding one document inside another.
+     For example: An address document can be embedded inside customer document.
+
+8) In which language MongoDB is written?
+    MongoDB is written and implemented in C++.
+
+9)  What is CRUD in MongoDB?
+    MongoDB supports following CRUD operations:
+	Create- Inserting a document into a collection
+	        The command db.collection.insert() will perform an insert operation into a collection of a document. 
+	Read- Querying a document from a collection
+	      To retrieve (Select) the inserted document, run the below command. The find() command will retrieve all the documents of the given collection.
+	      db.collection_name.find({"fieldname":"value"})
+	Update- In order to update specific field values of a collection in MongoDB, run the below query.
+	        Let us update the attribute name of the collection student for the document with regNo 3014.
+
+		db.student.update({
+			"regNo": "3014"	
+		},
+		$set:
+		{
+			"name":"Viraj"
+		})
+	Delete -  Removing an entry from the collection
+		  In order to delete an entry from a collection, run the command as shown below:
+		  db.collection_name.remove({"fieldname":"value"})
+
+10)  What is MongoDB Compass?
+     MongoDB Compass is the Graphical User Interface (GUI) for MongoDB, 
+     which helps users to analyze and manage their data without any prior knowledge of MongoDB query syntax.
+
+11) What is a Storage Engine in MongoDB?
+    A storage engine is the part of a database that is responsible for managing how data is stored on disk. For example, 
+    one storage engine might offer better performance for read-heavy workloads, and another might support a higher-throughput for write operations.
+
+12) What is a ‘namespace’?
+    The concatenation of the database name and the collection name (with a period in between) is called a ‘namespace’.
+
+13) How does MongoDB provide concurrency?
+    MongoDB uses reader-writer locks for concurrency. Reader-writer locks allow concurrent readers shared access to a resource, 
+    such as a database or collection, but give exclusive access to a single write operation.
+
+14) when to use rdbms over nosql?
+    In general, one should consider an RDBMS if one has multi-row transactions and complex joins. 
+    
+15) data in mongodb is stored in which format? 
+    MongoDB stores the data on the disk as BSON (BSON (Binary JSON) ) in server data path(dbpath in /etc/mongod. cnf ) directory, which is usually /data/db.
+    BSON-Binary json(json converted into binary form)
+
+16) Which are the most important features of MongoDB?
+    Flexible data model in form of documents
+    Agile and highly scalable database
+    Faster than traditional databases
+    Expressive query language
+
+17) Does MongoDB support ACID transaction management and locking functionalities?
+    No. MongoDB does not support default multi-document ACID transactions. However, MongoDB provides atomic operation on a single document.
+
+18) What is ObjectID  in MongoDB Explain the structure of ObjectID in MongoDB.
+    The ObjectId class is the default primary key for a MongoDB document and is usually found in the _id field in an inserted document
+    ObjectID is a 12-byte BSON type with:
+
+    4 bytes value representing seconds
+    3 byte machine identifier
+    2 byte process id
+    3 byte counter
+
+19) disadvantage of mongodb?
+   Data consumption is generally high due to de-normalization
+   Joins on data are not supported
+   There is no default transaction support; you need to handle this yourself
+   Map/Reduce is somewhat slow; other offerings are faster
+   You need dedicated employees to maintain it, which may increase operational overheads
+   It is not relational (then again, if you need relational, you’d use a relational solution)
+   MongoDb is also a memory hog
+   Certain operations result in a full database lock (ex. write operations) leading to concurrency issues
+   It is inconsistent by design
