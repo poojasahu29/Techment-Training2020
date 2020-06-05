@@ -214,7 +214,9 @@ select * from employee_master;
 select * from loan_card_master;
 
 /*-----------------QUERIES----------------------*/
+Q01. Display distinct Employee id, Employee name who kept the item issued for more than a year.
 
+Ans---SELECT DISTINCT employee_name,employee_id FROM employee_master INNER JOIN employee_issue_details on employee_master.employee_id=employee_issue_details.employee_id WHERE issue_date>(issue_date-365);
 
 02. Count number of customers who have gone for loan type Stationary. 
 
@@ -250,9 +252,32 @@ Ans---select em.employee_id, employee_name, sum(item_valuation)
 									count(distinct item_category)>=2
  								order by em.employee_id;
 
+
+09.Display count of employees who have recieved loan.
+
+Ans----SELECT COUNT(employee_id)
+FROM employee_master WHERE employee_id = 
+ALL ( SELECT employee_id FROM employee_issue_details)
+order by employee_id;
+
+12. Display customer who has not availed for loan.
+
+Ans----SELECT employee_id, employee_name, designation, department
+FROM employee_master WHERE employee_id NOT IN
+(SELECT employee_id FROM employee_issue_details);
+
 15. Display No. of emp in HR dept
 
 ans----select department,count(employee_name) from employee_master group by department having department='hr';
+
+
+
+16. Display issue status  and number of items of furniture based on issued and not issued 
+
+Ans----SELECT issue_status, count(item_id)
+FROM item_master
+WHERE item_category ='furniture'
+GROUP BY issue_status;
 
 
 19. Display name of categories and no of items in each category and sort in order of
