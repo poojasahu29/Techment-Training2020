@@ -1,0 +1,49 @@
+1)
+At the time of creating the database, the values ​​of its default options values are stored at which location???
+##data dictionary
+
+2)Name the default port for the MySQL Server.
+
+#TCP 3306. The default port for the MySQL service is TCP 3306.
+
+3)How to get the current MySQL version?
+
+#Here is the command to get the current MySQL version:
+
+               SELECT VERSION ();
+
+4)What is the latest version of MySQL???
+###8.0.19 released in 14th December 2019
+
+5)Who Developed MySQL???
+### Orcle Corporation
+
+6) Refrenced Table(Primary key)		and Refrencing Table(Foreign key) 	what operations are performed by both the tabl	e without any data violation??
+
+#Operations Perfomed			by Refrenced Table(Primary key)														
+
+1.Insert										:			without creating a violation performed	insert operation
+2.Delete									:				May cause violation in some cases 
+3.Update								:				May cause violation in some cases 
+																																																																																																																		
+
+
+#Operations Perfomed			by Refrencing Table(Foreign key)	
+
+1.Insert										:			May cause violation in some cases 
+2.Delete									:				will not create a violation 
+3.Update								:				May cause violation in some cases 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
