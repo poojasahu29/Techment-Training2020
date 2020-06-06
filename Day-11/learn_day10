@@ -1,0 +1,23 @@
+----------DevOps(day-2)------
+	
+1)Aspects of DevOps
+  People- motivaated persons
+  Process - follow process
+  Tools - git,maven,jira
+
+2)Components of DevOps
+  a) Continuous Integration - jenkings,bamboo, 
+  b) Continuous Testing  - Junit
+  c) Continuous Delivery - docker,puppet
+  d) Continous Monitory - slunk,sensu
+  e) Continous build -meven,gradle
+
+3)what is cloud, services of cloud.
+				------>infrastructure as a service
+				------>Platform as a service
+					------->software as a service
+5)what is Windows Azure 
+6)what is AWS(Amazon web services)
+
+
+
