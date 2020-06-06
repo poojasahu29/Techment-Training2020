@@ -1,0 +1,49 @@
+-----------------Day-12-------------
+#Learn About Git and GitHub
+#What is Version Control System
+#Git Commands 
+#Create Repository...
+#Git Base Installtion
+#add files or folders at local machine(Client machine) using git commands to upload files and folders on github server.
+#git commands are:
+
+1. git init---->initializing the git on files or folders(at local machine)
+
+2.git add . or file_name---->adding a file on git 
+
+3. git commit -m "message related to what uploaded files"----->after adding file or folders then commit (called stageing area)
+
+4.git remote add origin 'your_url_name'------->The 'origin' is the remote name, and the remote URL is "https://github.com/poojasahu29/Test2/". You can see the remote as GitHub in this case, and GitHub provides the URL for adding to the remote repository. 
+
+5. git push origin branch_name(default branch on master)-------->to push your files on github server
+
+--------Creating  a new branch-----------
+
+6. git branch branch_name------->create the new branch whose are define
+
+7. git checkout branch_name------->to switch on one branch to another branch
+
+8. git pull origin branch_name---->it pull is a Git command used to update the local version of a repository from a remote.
+
+9. git status----->Use git status in your bash to view all the files which are going to be staged to the first commit.
+
+10. git merge branch_name.
+
+-------Configuration username or password ------
+
+------>git config --global user.email "email_id"
+------->git config --global user.name "user_name on github account"
+------->git config --global user.password "password"
+------>git log(show all committed history)
+
+
+#practice on those commands.....
+
+
+
+
+
+
+
+
+
