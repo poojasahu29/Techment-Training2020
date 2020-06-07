@@ -1,0 +1,120 @@
+-----------------------File Security or Changing File Permission on Linux------------------------
+
+1)File Security:-------->File security is a feature of your file system which controls which users can access which files, and places limitations on what users can do to various files in your computer
+  ------>In Linux, every file and every directory are owned by a single user on that system.
+  ------>Each file and directory also has a security group associated with it that has access rights to the file or directory.
+   ------> If a user is not the directory or file owner nor assigned to the security group for the file, that user is classified as other and may still have certain rights to access the file.
+   ------> Each of the three file access categories, owner, group, and other, has a set of three access permissions associated with it.
+   ------> The access permissions are read, write, and execute.
+    ------>A user may belong to more than one group. 
+
+-------Changing File Permissisons commands are----
+
+    chmod --->modify file access rights
+    su --------> temporarily become the superuser
+    sudo - ---->temporarily become the superuser
+    chown ---->change file ownership
+    chgrp -----> change a file's group ownership
+
+---------------Each file and directory has three user based permission groups:------------------
+
+   ## Owner - The Owner permissions apply only the owner of the file or directory, they will not impact the actions of other users.
+    ##Group - The Group permissions apply only to the group that has been assigned to the file or directory, they will not affect the actions of other users.
+    ##All users - The All Users permissions apply to all other users on the system, this is the permission group that you want to watch the most.
+
+    -------------------Permission Types------------------------
+
+    Each file or directory has three basic permission types:------------
+
+    ##Read - The Read permission refers to a user's capability to read the contents of the file.
+    ##Write - The Write permissions refer to a user's capability to write or modify a file or directory.
+   ## Execute - The Execute permission affects a user's capability to execute a file or view the contents of a directory.
+
+Example:------------------------
+																								pooja@pooja-Inspiron-N5110:~$  ls -l /bin/bash
+																				o/p:---				-rwxr-xr-x 1 root root  316848 Feb 27  2000 /bin/bash
+Here we can see:
+
+    -->The file "/bin/bash" is owned by user "root"
+    -->The superuser has the right to read, write, and execute this file
+    -->The file is owned by the group "root"
+    -->Members of the group "root" can also read and execute this file
+    -->Everybody else can read and execute this file
+
+-rwx rwx rwx:
+here  : (-) indicates regular file
+(1st)-rwx: Read,write,and execute permissions for the file owner.
+(2nd) rwx:  Read,write,and execute permissions for the group owner of the file
+(3rd) rwx:  Read,write,and execute permissions for all other users.
+
+1)chmod commands:--------->The chmod command is used to change the permissions of a file or directory. 
+																																													To use it, you specify the desired permission settings and the file or files that you wish to modify. 
+																																													There are two ways to specify the permissions. In this lesson we will focus on one of these, called the octal notation method.
+
+				rwx rwx rwx = 111 111 111
+				rw- rw- rw- = 110 110 110
+				rwx --- --- = 111 000 000
+
+				and so on...
+
+										rwx = 111 in binary = 7
+										rw- = 110 in binary = 6
+										r-x = 101 in binary = 5
+										r-- = 100 in binary = 4	
+
+Value 	Meaning
+
+i)777--------->(rwxrwxrwx) No restrictions on permissions. Anybody may do anything. Generally not a desirable setting.
+
+ii)755-------->(rwxr-xr-x) The file's owner may read, write, and execute the file. All others may read and execute the file. This setting is common for programs that are used by all users.
+
+iii)700-------->(rwx------) The file's owner may read, write, and execute the file. Nobody else has any rights. This setting is useful for programs that only the owner may use and must be kept private from others.
+
+iv)666--------->(rw-rw-rw-) All users may read and write the file.
+
+v)644--------->(rw-r--r--) The owner may read and write a file, while all others may only read the file. A common setting for data files that everybody may read, but only the owner may change.
+
+vi)600--------->(rw-------) The owner may read and write a file. All others have no rights. A common setting for data files that the owner wants to keep private.
+
+
+2)Directory Permissions(chmod commands):
+
+The chmod command can also be used to control the access permissions for directories. Again, we can use the octal notation to set permissions, but the meaning of the r, w, and x attributes is different:
+
+    r - Allows the contents of the directory to be listed if the x attribute is also set.
+    w - Allows files within the directory to be created, deleted, or renamed if the x attribute is also set.
+    x - Allows a directory to be entered (i.e. cd dir).
+
+Here are some useful settings for directories:
+
+Value 	Meaning
+
+i)777------->(rwxrwxrwx) No restrictions on permissions. Anybody may list files, create new files in the directory and delete files in the directory. Generally not a good setting.
+
+ii)755-------->(rwxr-xr-x) The directory owner has full access. All others may list the directory, but cannot create files nor delete them. This setting is common for directories that you wish to share with other users.
+
+iii)700-------->(rwx------) The directory owner has full access. Nobody else has any rights. This setting is useful for directories that only the owner may use and must be kept private from others.
+
+3)Changing File Ownership(chown commands):
+
+You can change the owner of a file by using the chown command. Here's an example: Suppose I wanted to change the owner of some_file from "me" to "you". I could:
+
+Example:---------------
+pooja@pooja-Inspiron-N5110:~$ sudo su
+[sudo] password for pooja: 
+root@pooja-Inspiron-N5110:/home/pooja# chown you ethereum/
+root@pooja-Inspiron-N5110:/home/pooja# exit
+exit
+pooja@pooja-Inspiron-N5110:~$ 
+
+Notice that in order to change the owner of a file, you must be the superuser. To do this, our example employed the su command, then we executed chown, and finally we typed exit to return to our previous session.
+
+4)Changing Group Ownership:----------
+
+The group ownership of a file or directory may be changed with chgrp. This command is used like this:
+
+pooja@pooja-Inspiron-N5110:~$  chgrp new_group some_file
+
+In the example above, we changed the group ownership of some_file from its previous group to "new_group". You must be the owner of the file or directory to perform a chgrp.
+
+
