@@ -1,0 +1,50 @@
+------------DAY-13(10/06/2020)--------------------------------
+Topics:----------
+
+##HTTP Protocol and Web Server
+
+1)What is HTTP Protocol:--->it is stand for Hyper Text Transfor Protocol.
+																																								--->which provide communication over the world wide web.
+																																								--->The HTTP protocol is a request/response protocol. A client sends a request to the server in the form of a request method and server can response the requests.
+																																								--->HTTP is also called stateless protocol that means each request is executed independently, 
+																																																without any knowledge of the requests that were executed before it, which means once the transaction 
+																																															ends the connection between the browser and the server is also lost.
+																																								example:-----if the client would like to request the same server 100 times, the client  should establish a new connection 100 times as the server closes the connection for each request when the response is delivered.
+																																										----->HTTP is connectionless protocol because the server resources should be shared equally by all the clients throughout world. if one client holds the server with 100 requests, by all requests are answered, the server cannot allocate time for othr clients. 
+
+2)Web Application:----------->applicaiton which runs on browser
+																																						----->it is a collection of webpages and webpages nothing but colleciton of html documents.
+																																							----->HTML(Hyper Text Markup Language) now markup language that means it provides that markup tags whose describe the structure of the webpage/website including the heading, paragraph, or text, images etc or Hyper Text that means it provide linkable document means one document to link and go to the another doucments.
+
+3)What is Sever---------->it is collection of resources that provides source on clients and the resource can be html, text, audio,video,images or other data etc.
+
+5)Server Names----------->there are different types of server available on the market.....like apache server,ngnix,apache tomcat,etc.
+
+6)static webpages------->it contains html,css documents where client request to server or server response to the client.
+																														---->static contents can not be changed.
+																															---->not interacting with user example-----wikipedia(only user can read the pages can't be any changes)
+																														----->A static website is something in which the data is fixed and doesn't change unless it has been added in the html code.
+
+7)Dyanamic webpage:----->A dynamic web page is a web page that displays different content need by clients requests.
+																																			----->example:---Netflix,facebook,amazon etc.
+																																					---->In dynamic web pages, the Content of pages is different for different visitors.
+
+8)What is Session--------->first of all session is solved the problem on HTTP protocol connectionless.
+																																	---->It's meant to represent the time between a visitor's first arrival at a page on the site and the time they stop using the site.
+
+9)Cookies:------>Cookies are small files which are stored on a user's computer.
+																				--->Cookies are created when users visit a new website, and the web server sends a short stream of information to their web browsers
+																				--->it is store data on client machine(browsers)
+
+
+
+
+
+
+
+
+
+
+
+
+
