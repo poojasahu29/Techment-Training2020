@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <script src="https://apis.google.com/js/platform.js" async defer></script> 
+ <meta name="google-signin-client_id" content="927763577731-0tv1kf9o5su8abtu8c9ah14dn188b64m.apps.googleusercontent.com"> 
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid black;
+width:50%;
+margin-left:25%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 25%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+.cancelbtn {
+   
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  }
+</style>
+<script type="text/javascript">
+function onSignIn(googleUser) {
+  // window.location.href='success.jsp';
+
+  var profile = googleUser.getBasicProfile();
+  var imagurl = profile.getImageUrl();
+  var name = profile.getName();
+  var email = profile.getEmail();
+  document.getElementById("myImg").src = imagurl;
+  document.getElementById("name").innerHTML = name;
+  document.getElementById("myP").style.visibility = "hidden";
+  document.getElementById("status").innerHTML = 'Welcome ' + name
+      + '!<a href=success.jsp?email=' + email + '&name=' + name
+      + '/>Continue with Google login</a></p>'
+
+}
+
+function myFunction() {
+  gapi.auth2.getAuthInstance().disconnect();
+  location.reload();
+}
+<button onclick="myFunction()">Sign Out</button>
+
+  </script>
+</head>
+<body>
+
+
+<center><h2>Login Form</h2></center>
+
+<form action="#" method="post">
+  <div class="imgcontainer">
+    <img src="login.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password" name="password" required>
+        
+    <center><button type="submit">Login</button>
+    <button type="button" class="cancelbtn">Cancel</button></center>
+    <center><div>or</div>
+    <div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+    <img id="myImg">
+    <br>
+    <p id="name"></p>
+  
+  
+    <div id="status"></div></center>
+  
+    
+    
+
+    
+  </div>
+
+
+</form>
+
+</body>
+</html>

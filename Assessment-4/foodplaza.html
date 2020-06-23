@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Plaza</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8"> 
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	
+</head>
+<body>
+<ul>
+		<li>
+			<a href="#">
+				
+			<img src="foodplaza.png">
+					
+				</div>
+
+				
+			</a>
+		</li>
+		<li>
+			<a href="foodplaza.html">
+				<div class="icon">
+
+					<i class="fa fa-home" aria-hidden="true"></i>
+					<i class="fa fa-home" aria-hidden="true"></i>	
+				</div>
+
+				<div class="name" data-text="HOME">HOME</div>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="icon">
+				<i class="fa fa-address-book-o" aria-hidden="true"></i>	
+				<i class="fa fa-address-book-o" aria-hidden="true"></i>	
+				</div>
+				<div class="name" data-text="ABOUT US">ABOUT US</div>
+			</a>
+		</li>
+			<li>						
+							<a href="locations.html">
+								<div class="icon">
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									<i class="fa fa-map-marker" aria-hidden="true"></i>	
+								</div>
+									<div class="dropdown" data-text="LOCATIONS">LOCATIONS</div></a></li>
+									<li>
+							<a href="orderfood.html">
+								<div class="icon">
+								<i class="fa fa-cutlery" aria-hidden="true"></i>
+								<i class="fa fa-cutlery" aria-hidden="true"></i>
+								</div>
+									<div class="name" data-text="ORDER FOOD">ORDER FOOD</div></a></li>
+									<li>
+
+							<a href="login.html">
+								<div class="icon">
+								<i class="fa fa-sign-in" aria-hidden="true"></i>
+								<i class="fa fa-sign-in" aria-hidden="true"></i>
+								</div>
+									<div class="name" data-text="LOGIN">LOGIN</div></a></li>
+				
+				</div>
+			</li>
+			
+		
+	</ul></div>
+	<div id="content" class="xyz">
+	 <h3>About Food Plaza....</h3>
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+	</div>
+	<div id="sidebar">
+		<div class="w3-content" style="max-width:1000px">
+  <img class="mySlides" src="food1.jpeg" style="width:100%; height:300px;">
+  <img class="mySlides" src="food2.jpeg" style="width:100%; height:300px;">
+  <img class="mySlides" src="food3.jpg" style="width:100%; height:300px;">
+  <img class="mySlides" src="food4.jpg" style="width:100%; height:300px;">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+  <button class="w3-button demo" onclick="currentDiv(4)">4</button> 
+</div></div>
+<div id="footer">
+	<center><h1>Get in Touch</h1>
+	<form action="#">
+  <div class="container">
+    
+    <hr>
+
+	<label for="name"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="name" id="name" required>
+
+	<label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+    <label for="mobile"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter Mobile Number" name="mob" id="mob" required>
+     <label for="msg"><b>Your Message</b></label>
+    <textarea id="purpose" name="purpose" class="form-control-exp input_required " placeholder="Your message or query" required></textarea>
+
+    
+   
+   
+    <button type="submit" class="registerbtn">Submit Now</button>
+     <button type="cancel" class="registerbtn">Cancel</button>
+  </div>
+  
+   
+</form>
+	
+		<p><a href="foodplaza.html">Food Plaza</a> design@copyright 2020.</p><center>
+
+	</div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
+</body>
+</html>

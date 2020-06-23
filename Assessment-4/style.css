@@ -1,0 +1,229 @@
+@charset "UTF-8";
+ body{
+ 	margin:0;
+ 	padding:0;
+ 	font-family: sans-serif;
+ 	background-color: #e91e63;
+	font-family: arial,helvetica,times;
+	}
+			@keyframes text {
+				50%{
+					background-position: left;
+				}
+				100%{
+					background-position: right;
+				}
+			}
+			.mySlides {display:none}
+			
+			#content{
+				background-color: yellow;
+				width: 656px;
+				min-height: 408px;
+				padding: 20px;
+				text-align: justify;
+				box-sizing: border-box;
+				float: left;
+
+			}
+			#sidebar{
+				background-color: lightblue;
+				width: 640px;
+				min-height: 400px;
+				float: right;
+
+			}
+			
+			#footer{
+				width: 100%;
+				background-color:white;
+				color: black;
+				padding: 1px 3px;
+				text-align: left;
+				clear: both;
+			}
+			#location{
+				margin-top: 10px;
+				width: 800px;
+				margin-left: 20px;
+				height: 50%;
+			}
+	@media (max-width: 1020px) {
+		#wrapper{width: auto;}
+		#content{width: 80%;}
+		#sidebar{width: 20%;}
+
+}
+	@media (max-width: 810px) {
+		#wrapper{width: auto;}
+		#content{width: 70%;}
+		#sidebar{width: 30%;}
+}
+@media (max-width: 510px) {
+		#wrapper{width: auto;}
+		#content{width: 100%;float: none;}
+		#sidebar{width: 100%;}
+		#header{text-align: center; font-variant: small-caps;color: white;background-color: rgb(0,0,102); height: 6%; font-family: times;}
+		
+}
+img{
+	height:100px;
+	
+
+}
+/*ul{
+	position: absolute;
+	box-sizing: border-box;
+	top: 6%;
+	left:5%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 20px 0;
+	background: #fff;
+	display: flex;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}*/
+ul {
+
+	box-sizing: border-box;
+	height: 20%;width: 100%;
+	top: 5%;
+   display: flex;
+  
+   box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+ 
+}
+ul li{
+	list-style: none;
+	text-align: center;
+	display: block;
+	
+}
+
+li{
+	 float:left;
+}
+li a {
+	margin-left: 50px;
+
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+	color: red;
+}
+ul li a .icon{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: #ccc;
+	overflow: hidden;
+	margin: 0 auto 10px;
+
+}
+
+ul li a .icon .fa{
+
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	font-size: 30px;
+	transition: .4s;
+	color: #000;
+}
+ul li a:hover .icon .fa:last-child{
+	color:#e91e63;
+}
+ul li a:hover .icon .fa{
+ 	transform: translateY(-100%);
+
+}
+.container {
+  padding: 16px;
+  background-color: white;
+  width: 50%;
+}
+.container_food{
+  padding: 16px;
+  background-color: white;
+  width: 100%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+textarea{
+width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.select option {
+width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+
+
