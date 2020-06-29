@@ -1,0 +1,3 @@
+1. Go to foodplaza.html page this is a first page of project.
+2. Here to see the navigation bar which is included different pages like login page, orderfood page,locations page.
+   Here this project not linked to the Database just create the static project at that given time.
